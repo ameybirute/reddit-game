@@ -2,6 +2,7 @@ const character = document.getElementById('character');
 const mobileControls = document.getElementById('mobile-controls');
 const status = document.getElementById('status');
 const tryAgainContainer = document.getElementById('tryAgainContainer');
+const tryAgainBtn = document.getElementById('tryAgainBtn');
 
 let x = 100;
 let y = 0;
@@ -13,7 +14,7 @@ let directionFacing = 1;
 let currentUsername = "";
 
 const jumpSound = new Audio("sounds/jump.mp3");
-const gameOverSound = new Audio("sounds/gameover.mp3");  // <-- Added this line
+const gameOverSound = new Audio("sounds/gameover.mp3");  // add your gameover sound file here
 
 const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 if (!isMobile) {
@@ -50,7 +51,8 @@ function jump() {
   } else {
     const name = currentUsername || "You";
     status.textContent = `${name} lost because of excessive farting 💨💀`;
-    gameOverSound.play(); // play the game over sound here
+    gameOverSound.currentTime = 0;
+    gameOverSound.play();
     gameOver = true;
     tryAgainContainer.style.display = 'block';
   }
@@ -111,6 +113,10 @@ document.addEventListener('keydown', (e) => {
   if (key === 'arrowleft' || key === 'a') move('left');
   else if (key === 'arrowright' || key === 'd') move('right');
   else if (key === ' ') jump();
+});
+
+tryAgainBtn.addEventListener('click', () => {
+  location.reload();
 });
 
 updatePosition();
