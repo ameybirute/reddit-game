@@ -14,6 +14,7 @@ let currentUsername = "";
 
 const jumpSound = new Audio("sounds/jump.mp3");
 
+
 const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 if (!isMobile) {
   mobileControls.style.display = 'none';

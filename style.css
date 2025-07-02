@@ -1,8 +1,10 @@
-body, html {
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+  background: rgb(213, 73, 26);
+  font-family: monospace;
+  color: white;
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 #controls {
@@ -16,18 +18,20 @@ body, html {
 
 #game {
   position: relative;
-  height: 100vh;
-  background: green;
+  background: rgb(7, 5, 3);
+  height: 80vh;
+  overflow: hidden;
 }
 
 #character {
   position: absolute;
+  width: 80px;
+  top: auto;
   bottom: 0;
-  width: 80px; 
-  transition: left 0.05s, bottom 0.05s;
-  z-index: 100; 
+  left: 100px;
+  transition: transform 0.1s linear;
+  z-index: 10;
 }
-
 
 
 #mobile-controls {
