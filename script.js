@@ -13,7 +13,7 @@ let directionFacing = 1;
 let currentUsername = "";
 
 const jumpSound = new Audio("sounds/jump.mp3");
-
+const gameOverSound = new Audio("sounds/gameover.mp3");  // <-- Added this line
 
 const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 if (!isMobile) {
@@ -49,8 +49,8 @@ function jump() {
     status.textContent = `Jump ${10 - jumpCount} times to win`;
   } else {
     const name = currentUsername || "You";
-    status.textContent = `${name} lost because of excessive farting`;
-    gameOverSound.play();
+    status.textContent = `${name} lost because of excessive farting 💨💀`;
+    gameOverSound.play(); // play the game over sound here
     gameOver = true;
     tryAgainContainer.style.display = 'block';
   }
