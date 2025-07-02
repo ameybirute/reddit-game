@@ -50,7 +50,7 @@ function jump() {
     status.textContent = `Jump ${10 - jumpCount} times to win`;
   } else {
     const name = currentUsername || "You";
-    status.textContent = `${name} lost because of excessive farting 💨💀`;
+    status.textContent = `${name} died because of excessive farting 💨💀`;
     gameOverSound.currentTime = 0;
     gameOverSound.play();
     gameOver = true;
