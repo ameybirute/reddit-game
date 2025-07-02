@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reddit Avatar Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="controls">
+    <input type="text" id="redditInput" placeholder="Enter Reddit username" />
+    <button onclick="loadRedditAvatar()">Use Reddit Avatar</button>
+  </div>
+
+  <div id="status">Jump 10 times to win</div>
+
+  <div id="game">
+    <img id="character" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg" alt="Character">
+    
+    <div id="mobile-controls">
+      <div class="control-row">
+        <button onclick="move('left')">←</button>
+        <button onclick="jump()">↑</button>
+        <button onclick="move('right')">→</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="tryAgainContainer" style="display: none;">
+    <button onclick="location.reload()">Try Again</button>
+  </div>
+
+  <footer id="footer-credit">Made with ❤️ by Amey</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

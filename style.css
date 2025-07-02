@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background: rgb(213, 73, 26);
+  font-family: monospace;
+  color: white;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+#controls {
+  margin: 10px;
+}
+
+#status {
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+#game {
+  position: relative;
+  background: rgb(7, 5, 3);
+  height: 80vh;
+  overflow: hidden;
+}
+
+#character {
+  position: absolute;
+  width: 80px;
+  top: auto;
+  bottom: 0;
+  left: 100px;
+  transition: transform 0.1s linear;
+  z-index: 10;
+}
+
+
+#mobile-controls {
+  position: relative;
+  margin-top: 20px;
+}
+
+.control-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#footer-credit {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  padding: 12px 0;
+  z-index: 10;
+}
